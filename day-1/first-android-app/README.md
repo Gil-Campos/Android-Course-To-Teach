@@ -97,4 +97,4 @@ The attribute `text` is underlined in yellow, hover your mouse in the yellow lin
 
 Extracting resource is a must in app development because it help us to reuse strings and not type the same text all the time and when you if you need to translate the app it makes it easier.
 
-To continue this section go to the file name `README2.md`
+To continue this section go to the file name [README2.md](day-1\first-android-app\README2.md)
