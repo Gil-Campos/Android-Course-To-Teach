@@ -31,3 +31,19 @@ Lets explain this code more in depth
 
 2. Function name `main` this is the name used to call the function in other places in this case is main but the name of the function needs to be descriptive of what it does and needs to be written in camel casing.
 
+3. The parenthesis after the function name `()` are really important in the creation of a function because here you declare the parameters passed to your function to handle this data is called arguments, we'll explain this later in more depth it can be a little confusing at firts don't worry.
+
+4. The curly braces `{}` this encapsulates the code that the function is going to execute when is called as you can see here in the function above us we called another function `println()` inside the main function and the in the parenthesis we put a text in double quotes (String) that is an argument.
+
+5. Above the main function you maybe see something like 
+
+```
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+```
+
+That is a bllock comment, comments are usually ignored by the compilers, we add comments to provide an explanation about what the code does because in programming we work a lot in teams.
+
+If you only need to add a simple explanation nothing to fancy you can use single line comments like this `// This is a single line comment`.
