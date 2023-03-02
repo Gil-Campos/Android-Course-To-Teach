@@ -47,3 +47,7 @@ Lets explain this code more in depth
 That is a bllock comment, comments are usually ignored by the compilers, we add comments to provide an explanation about what the code does because in programming we work a lot in teams.
 
 If you only need to add a simple explanation nothing to fancy you can use single line comments like this `// This is a single line comment`.
+
+AWESOME! You are looking more like an Android Developer every day that you practice and put yourself some challenges but try not to burn yourself doing really complicated stuff.
+
+To continue learning about Kotlin Fundamentlas please go to `README2` this will help you to build solid foundations about this awesome programming language and practice what you have learned here.
