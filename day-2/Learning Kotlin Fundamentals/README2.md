@@ -89,10 +89,74 @@ fun main() {
     println("Second number is $secondNumber")
     println("Addition of them is 20")
     println("Substraction of them is 4")
+    println("")
     firstNumber = 20
-    println("Third number is $firstNumber")
-    println("Fourth number is $secondNumber")
+    println("First number is $firstNumber")
+    println("Second number is $secondNumber")
     println("Addition of them is 28")
     println("Substraction of them is 12")
 }
 ```
+
+As you might notice I ditch the third and fourth number because that would create extensive, hard and repetitive code.
+
+So lets begin explaining the code above this code is useful but not very practive because we are still having hardcoded values for example if you change the values of the firstNumber and secondNumber the answers to the operation will not change.
+
+To solve the hardcoded values in the operations we have to use strings templates and use logical operators like this one below:
+
+```
+fun main() {
+    var firstNumber = 12
+    val secondNumber = 8
+    println("First number is $firstNumber")
+    println("Second number is $secondNumber")
+    println("Addition of them is ${firstNumber+secondNumber}")
+    println("Substraction of them is ${firstNumber-secondNumber}")
+    println("")
+    firstNumber = 20
+    println("First number is $firstNumber")
+    println("Second number is $secondNumber")
+    println("Addition of them is ${firstNumber+secondNumber}")
+    println("Substraction of them is ${firstNumber-secondNumber}")
+}
+```
+
+Run the code and and you will see that the code works really good and this more scalable than having hardcoded numerical solutions but still we are repeating a lot of code, we could use functions and reuse it to make the program more efficient.
+
+### Functions
+
+```
+fun main() {
+    printStringAndCalculation(12, 8)
+    printStringAndCalculation(20, 8)
+}
+
+fun printStringAndCalculation(firstNumber: Int, secondNumber: Int) {
+    println("First number is $firstNumber")
+    println("Second number is $secondNumber")
+    println("Addition of them is ${firstNumber+secondNumber}")
+    println("Substraction of them is ${firstNumber-secondNumber}")
+    println("")
+}
+```
+Ok the code changed a lot... I know it looks daunting because from the big chunk of code the we've working on we have so little left of it.
+
+This wouldn't be possible without the help of functions, functions give us the opportunity to separate code and reuse it the code above is a great example, if we want to do 5 calculations we would have to write 5 times the same exact chunk of code but with functions we only need to call a single function 5 times and that contains the necessary code to perform the 5 calculations needed.
+
+This function is new to you because it has parameters when its declared, parameters are the firstNumber and secondNumber inside the parenthesis after the function name to add parameters to a function you would do it in the following way:
+
+```
+fun name(parameter1: dataType, parameter2: dataType) {
+    // function body
+}
+```
+
+You can call a function from other functions and even the same function can call itself and that is recursion but we won't see that here, don't worry.
+
+When calling a function that has parameters that data that you pass is called arguments and needs to be from the same type as previously declared in the function if not it will crash.
+
+### End
+
+Great you have finish you calculator... you can add more things like a multiply function or divide, I encourage you to do it because practice makes perfection or if you wan to rest its ok.
+
+To continue learning Kotlin you can go to `README3` here we are going to learn more about functions and other thins in more depth. 
