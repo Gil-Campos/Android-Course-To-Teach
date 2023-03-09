@@ -73,3 +73,26 @@ To do this program dynamic we are going to use set of tools that every programme
 
 ### Variables
 
+In Kotlin you are going to use two keywords for defining a variable well one is a variable and the other is a constant we'll explain their differences in a bit.
+
+- var: multiple values during runtime, the value of this can be change during runtime.
+
+- val: single value during runtime, this means they're inmutable and if you try to change you might get an exception and your app will crash.
+
+Lets add variables to our previous code and it will look something like this:
+
+```
+fun main() {
+    var firstNumber = 12
+    val secondNumber = 8
+    println("First number is $firstNumber")
+    println("Second number is $secondNumber")
+    println("Addition of them is 20")
+    println("Substraction of them is 4")
+    firstNumber = 20
+    println("Third number is $firstNumber")
+    println("Fourth number is $secondNumber")
+    println("Addition of them is 28")
+    println("Substraction of them is 12")
+}
+```
