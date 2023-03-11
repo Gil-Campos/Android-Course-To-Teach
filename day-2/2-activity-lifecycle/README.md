@@ -60,4 +60,36 @@ I really encourage you to read the article above about the LogCat and play with 
 
 ## Activity Lifecycle
 
-Now that we have a some understanding about LogCat we can start studying the activity lifecycle, this a really important topic because based in this the apps are displayed, run and even cause some bugs if wen don't understand how apps come to life for real come to life in the system.
+Now that we have some understanding about the LogCat we can start studying the activity lifecycle, this a really important topic because based on this the apps are create, displayed and destroyed if wen don't understand how apps come to life for real come to life in the system we are not going to do good implementations.
+
+To explain this I will use an image that represents how android apps are created and how are managed in the android system.
+
+![Activity Lifecycle](/day-2/img/activity_lifecycle.png "Activity Lifecycle")
+
+The activity lifecycle has 3 key moments in its life time and to navigate through those moments we uses six callbacks:
+
+- onCreate()
+
+- onStart()
+
+- onResume()
+
+- onPause()
+
+- onStop()
+
+- onDestroy()
+
+The system invokes each of these callbacks when a key moment is triggered because the activity has pass to a new state. The diagram above it doesn't go in a straight line in real life so don't think that this diagram is executed just one time some of them execute many times and some just one.
+
+The system likelihood of killing processes to optimize your experience (including activities), depending how complex is your app maybe you need to implement all the callbacks to ensure that the behaves properly.
+
+### Explaining lifecycle callbacks
+
+This is just conceptual information about the callback methods we will override them later... coding is not just code there is theory behind for us to understand what is going on behind the scenes.
+
+- onCreate(): called when activity is first created, you perform basic application startup logic that should happen only once for the entire life of the activity. For example you implementation might bind data to lists, associate the activity with a ViewModel, and instatiate some class-scope vairables.
+
+>> Your activity does not reside in the created state. After the `onCreate()` method finishes execution, the activity enters the started state, and the system calls the `onStart()` and `onResume()` methods in quick succession.
+
+- onStart(): 
