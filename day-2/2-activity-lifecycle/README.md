@@ -116,3 +116,9 @@ This is just conceptual information about the callback methods we will override 
 
 > 2. the system is temporarily destroying the activity due to a configuration change (such as device rotation or multi-window mode)
 
+# END
+
+To see how to override the callbacks and use them go to the `README2` of this section, right now you have a great understanding on well a theoretical one in the lifecycle of an activity.
+
+Keep pushing and don't stop the practice.
+
