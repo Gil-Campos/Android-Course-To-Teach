@@ -92,4 +92,27 @@ This is just conceptual information about the callback methods we will override 
 
 >> Your activity does not reside in the created state. After the `onCreate()` method finishes execution, the activity enters the started state, and the system calls the `onStart()` and `onResume()` methods in quick succession.
 
-- onStart(): 
+- onStart(): called when activity is becoming visible to the user, as the app prepares to enter foreground and become interactive. For example, this method is where the app initializes the code that maintains the UI.
+
+>> The `onStart()` method completes very quickly and, as with the Created state, the activity does not stay resident in the Started state. Once this callback finishes, the activity enters the Resumed state, and the system invokes the `onResume()` method.
+
+- onResume(): called when activity will start interacting with the user. The app stays in this state until something happens to take focus away from the app. Such an event might be, for instance, receiving a phone call, the user’s navigating to another activity, or the device screen’s turning off.
+
+>> If the activity returns to the Resumed state from the Paused state, the system once again calls `onResume()` method. For this reason, you should implement `onResume()` to initialize components that you release during `onPause()`, and perform any other initializations that must occur each time the activity enters the Resumed state.
+
+- onPause(): called when activity is not visible to the user; it indicates that the activity is no longer in the foreground (though it may still be visible if the user is in multi-window mode).
+
+>> Use the onPause() method to pause or adjust operations that should not continue (or should continue in moderation) while the Activity is in the Paused state, and that you expect to resume shortly. There are several reasons why an activity may enter this state.
+
+- onStop(): called when activity is no longer visible to the user. This may occur, for example, when a newly launched activity covers the entire screen. The system may also call onStop() when the activity has finished running, and is about to be terminated.
+
+>> Instead, you should perform heavy-load shutdown operations during onStop(). For more information about suitable operations to perform during onStop(), see onStop(). For more information about saving data, see Saving and restoring activity state.
+
+- onRestart(): 	called after your activity is stopped, prior to start. The onRestart() method will be called whenever the Activity comes back from the invisible state. Suppose, we pressed the home button of the device and coming back, this onRestart() will be invoked.
+
+- onDestroy(): called before the activity is destroyed. The system invokes this callback either because:
+
+> 1. the activity is finishing (due to the user completely dismissing the activity or due to finish() being called on the activity).
+
+> 2. the system is temporarily destroying the activity due to a configuration change (such as device rotation or multi-window mode)
+
