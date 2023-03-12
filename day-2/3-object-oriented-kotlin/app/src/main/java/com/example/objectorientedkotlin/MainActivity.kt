@@ -10,5 +10,12 @@ class MainActivity : AppCompatActivity() {
 
         val car = Car()
         car.start()
+
+        val driver = Driver("Lewis")
+        driver.currentSpeed = 120
+        driver.showDetails()
+
+        val myCar = MyCar()
+        myCar.start()
     }
 }

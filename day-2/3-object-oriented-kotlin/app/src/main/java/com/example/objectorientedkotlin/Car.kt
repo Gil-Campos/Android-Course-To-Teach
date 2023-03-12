@@ -2,8 +2,8 @@ package com.example.objectorientedkotlin
 
 import android.util.Log
 
-class Car {
-    fun start() {
+open class Car {
+    open fun start() {
         Log.i("MY_TAG", "Car is starting...")
     }
 }
